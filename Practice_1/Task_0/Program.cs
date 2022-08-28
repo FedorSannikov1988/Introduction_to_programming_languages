@@ -1,18 +1,33 @@
-﻿//Задание № 0
-
-//Напишите программу, которая на вход принимает 
+﻿//Напишите программу, которая на вход принимает 
 //число и выдаёт его квадрат (число умноженное на само себя).
 
-//System.Console.WriteLine("Пожалуйста введите число ");
+int Prompt(string message)
+{
+System.Console.Write(message);
+string strValue = Console.ReadLine() ?? ""; 
+int Value = int.Parse (strValue);
+return Value;
+}
 
-//Такой ввод числа мне нравится больше
+int Value = Prompt("Введите число ");
+
+int Result = Value * Value;
+
+System.Console.WriteLine($"Квадрат числа {Value} равен {Result}");
+
+/*
+
+//System.Console.WriteLine("Пожалуйста введите число ");
 System.Console.Write("Пожалуйста введите число ");
 
 string strValue;
-strValue = Console.ReadLine() ?? "0"; 
+strValue = Console.ReadLine() ?? ""; 
 
+//превращаем string в int
 int Value = int.Parse (strValue);
 
 int Result = Value * Value;
 
 System.Console.WriteLine($"Квадрат числа {Value} равен {Result}");
+
+*/
