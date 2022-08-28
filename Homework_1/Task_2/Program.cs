@@ -12,6 +12,7 @@ float Value = float.Parse (strValue);
 return Value;
 }
 
+//Блок вывода сообщений пользователю
 System.Console.WriteLine("Данная программа принимает три числа и выдаёт, максимальное из этих чисел.");
 System.Console.WriteLine("Пользователь обратите внимание программа работает с float");
 System.Console.WriteLine("Дробные числа вводить с использованием , иначе выдаст ошибку!");
