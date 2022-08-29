@@ -400,3 +400,6 @@ FodyWeavers.xsd
 # Ignorred .config and file dotnet-tools.json
 .config/
 .config/dotnet-tools.json #
+
+# Ignorred .readme_for_my.md
+/readme_for_my.md
