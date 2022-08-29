@@ -396,3 +396,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignorred .config and file dotnet-tools.json
+.config/
+.config/dotnet-tools.json #

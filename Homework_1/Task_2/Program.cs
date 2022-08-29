@@ -1,5 +1,5 @@
-﻿/* 
-Задача 2: Напишите программу, которая принимает 
+﻿/*
+Задача 2: Напишите программу, которая принимает
 на вход три числа и выдаёт максимальное из этих чисел.
 */
 
@@ -7,8 +7,8 @@
 float DataVvod(string message)
 {
 System.Console.Write(message);
-string strValue = Console.ReadLine() ?? ""; 
-float Value = float.Parse (strValue);
+string strValue = Console.ReadLine() ?? "";
+float Value = float.Parse(strValue);
 return Value;
 }
 
@@ -23,7 +23,7 @@ float Value2 = DataVvod("Введите число №2: ");
 float Value3 = DataVvod("Введите число №3: ");
 
 /*
-Содрал алгоритм с лекции ( так как стало лень :-) ) 
+Содрал алгоритм с лекции ( так как стало лень :-) )
 придумывать что - то более изящное (работает ведь)
 хотя по хорошему нужно массив данных заводить и использовать цикл
 К слову сказать Лектор не использует {} при использовании if
@@ -32,8 +32,12 @@ float Value3 = DataVvod("Введите число №3: ");
 //Блок условий поиска максимального числа
 float MaХ = Value1;
 
+/*
+//Согласно комментарию преподавателя данное условие не нужна с чем полностью согласен !
+//Видимо глаз замылился !
 if (Value1 > MaХ) {MaХ = Value1;}
-if (Value2 > MaХ) {MaХ = Value2;}
-if (Value3 > MaХ) {MaХ = Value3;}
+*/
+if ( Value2 > MaХ ) { MaХ = Value2; }
+if ( Value3 > MaХ ) { MaХ = Value3; }
 
 System.Console.WriteLine($"Максимальное число {MaХ} из чисел {Value1}, {Value2}, {Value3}");
