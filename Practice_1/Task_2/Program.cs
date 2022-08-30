@@ -5,6 +5,8 @@
 5 -> Пятница
 */
 
+//Мое решение (топорно и в лоб):
+
 //Блок ввода (немного модернизировал/параметризировал)
 int ZaPRoS(string message, int SposViVoD)
 {
@@ -20,7 +22,7 @@ System.Console.WriteLine("Введите число с 1-ого до 7-ми со
 int DaY = ZaPRoS("Номер дня недели: ", 0);
 
 //Логический блок
-if (DaY >=1 )
+if ( 7 >= DaY && DaY >= 1 )
 {
   System.Console.WriteLine("Введенное чиcло соотвует следующему дню недели:");
   if( DaY == 1 ){System.Console.WriteLine("Понедельник");}
@@ -31,7 +33,17 @@ if (DaY >=1 )
   if( DaY == 6 ){System.Console.WriteLine("Суббота");}
   if( DaY == 7 ){System.Console.WriteLine("Воскресенье");}
 }
-else
+
+//---
+
+if (DaY <= 0 )
 {
   System.Console.WriteLine("Вы ввели число меньше 0 или 0 !");
+}
+
+//---
+
+if ( DaY >= 8 )
+{
+  System.Console.WriteLine("Вы ввели число больше 7");
 }

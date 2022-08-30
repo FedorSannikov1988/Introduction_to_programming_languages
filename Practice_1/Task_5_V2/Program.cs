@@ -8,23 +8,33 @@
 */
 
 //Блок ввода
-float ZaPRoS(string message, int SposViVoD)
+int ZaPRoS(string message, int SposViVoD)
 {
     if (SposViVoD == 0) {System.Console.Write(message);}
     if (SposViVoD == 1) {System.Console.WriteLine(message);}
     string strValue = Console.ReadLine() ?? "";
-    float Value = float.Parse(strValue);
+    int Value = int.Parse(strValue);
     return Value;
 }
 
-float Chislo = ZaPRoS("Введите число модуль которого нужно получить: ", 0);
+int Chislo = ZaPRoS("Введите число модуль которого нужно получить: ", 0);
+
+int ByFer;
+
+//---
 
 if ( Chislo < 0 )
 {
-   System.Console.WriteLine($"Модуль числа {Chislo} равен {-1 * Chislo}");
+    ByFer = -1 * Chislo;
 }
+
 //---
+
 else
 {
-   System.Console.WriteLine($"Модуль числа {Chislo} равен {Chislo}");
+    ByFer = Chislo;
 }
+
+//---
+
+System.Console.WriteLine($"Модуль числа {Chislo} равен {ByFer}");
