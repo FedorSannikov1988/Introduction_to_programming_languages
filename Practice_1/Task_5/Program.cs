@@ -7,6 +7,8 @@
 На практике определились что это будет программа/функция вычисления куба (1 : 20) !
 */
 
+//Сделал сам через флоат
+
 //Блок ввода
 float ZaPRoS(string message, int SposViVoD)
 {
@@ -18,13 +20,11 @@ float ZaPRoS(string message, int SposViVoD)
 }
 
 float Chislo = ZaPRoS("Введите число модуль которого нужно получить: ", 0);
+System.Console.WriteLine("Тип вводимого числа float. Ввод дробной части через ,");
 
-if ( Chislo < 0 )
-{
-   System.Console.WriteLine($"Модуль числа {Chislo} равен {-1 * Chislo}");
-}
+float ModChislo;
+
+if ( Chislo<0) {ModChislo = ((-1) * Chislo);}
 //---
-else
-{
-   System.Console.WriteLine($"Модуль числа {Chislo} равен {Chislo}");
-}
+else {ModChislo = Chislo;}
+System.Console.WriteLine($"Модуль числа {Chislo} равен {ModChislo}");
