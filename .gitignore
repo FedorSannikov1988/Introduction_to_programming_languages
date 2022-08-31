@@ -399,9 +399,10 @@ FodyWeavers.xsd
 
 # My Ignorred:
 
-# Ignorred .config and file dotnet-tools.json
+# Ignorred .config and file dotnet-tools.json in .config
 .config/
-.config/dotnet-tools.json #
+## Ignorred onli file dotnet-tools.json
+./config/dotnet-tools.json
 
-# Ignorred .readme-for-my.md
+# Ignorred file .readme-for-my.md
 /readme-for-my.md
