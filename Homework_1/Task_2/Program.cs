@@ -39,5 +39,3 @@ if (Value1 > MaХ) {MaХ = Value1;}
 */
 if ( Value2 > MaХ ) { MaХ = Value2; }
 if ( Value3 > MaХ ) { MaХ = Value3; }
-
-System.Console.WriteLine($"Максимальное число {MaХ} из чисел {Value1}, {Value2}, {Value3}");

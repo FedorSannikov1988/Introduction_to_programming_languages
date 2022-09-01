@@ -14,7 +14,7 @@ int ZaPRoS(string message, int SposViVoD)
 
 int Chislo = ZaPRoS("Введите число факториал которого нужно найти ", 0);
 //---
-if ( Chislo > 0 )
+if ( Chislo >= 0 )
 {
 int FactChislo = 1 ;
 
@@ -23,12 +23,6 @@ for (int i = 1; i <= Chislo; i++)
     FactChislo = FactChislo*i;
 }
 
-System.Console.WriteLine($"Факториал числа {Chislo} равен {FactChislo}");
-}
-//---
-if ( Chislo == 0 )
-{
-int FactChislo = 1 ;
 System.Console.WriteLine($"Факториал числа {Chislo} равен {FactChislo}");
 }
 //---
