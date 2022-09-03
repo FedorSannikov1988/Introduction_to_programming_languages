@@ -8,8 +8,13 @@ int ZaPRoS(string message, int SposViVoD)
     if (SposViVoD == 0) {System.Console.Write(message);}
     if (SposViVoD == 1) {System.Console.WriteLine(message);}
     string strValue = Console.ReadLine() ?? "";
-    int Value = int.Parse(strValue);
-    return Value;
+    //int Value = int.Parse(strValue);
+    //коечто поинтереснее:
+    bool isNumber = int.TryParse(strValue, out int Value);
+    if (isNumber) {return Value;}
+    throw new Exception ("Введенные символы невозможно преобразовать в целое число !");
+    //если не используем одинадцатую строчку
+    //return Value;
 }
 
 //Процедура вычисления числа Фибоначчи (положительного числа)
