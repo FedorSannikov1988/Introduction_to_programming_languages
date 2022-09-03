@@ -33,8 +33,8 @@ int ByfeR = DaY - 1 ;
 
 if ( 7 >= DaY && DaY >= 1 )
 {
-if ( 5 >= DaY && DaY >= 1 ) {System.Console.WriteLine($"Введенное чиcло соотвует следующему БУДНЕМУ дню недели: {WeeK[ByfeR]}");}
-if ( 7 >= DaY && DaY >= 6 ) {System.Console.WriteLine($"Введенное чиcло соотвует следующему ВЫХОДНОМУ дню недели: {WeeK[ByfeR]}");}
+if ( 5 >= DaY && DaY >= 1 ) {System.Console.WriteLine($"Введенное чиcло соответствует следующему БУДНЕМУ дню недели: {WeeK[ByfeR]}");}
+if ( 7 >= DaY && DaY >= 6 ) {System.Console.WriteLine($"Введенное чиcло соответствует следующему ВЫХОДНОМУ дню недели: {WeeK[ByfeR]}");}
 }
 //---
 if ( DaY <= 0 ) {System.Console.WriteLine("Вы ввели число меньше 0 или 0 такого дня недели нет !");}

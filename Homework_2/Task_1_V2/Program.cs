@@ -57,6 +57,6 @@ int chislo = ZaPRoS("Пожалуйста введите трехзначное 
 
 int result = FaynChislo(chislo, 2);
 
-if ( result == -1 ) {System.Console.WriteLine($"Введенное Вами число {chislo} имеет всего два знака или меньше");}
+if ( result == -1 ) {System.Console.WriteLine($"Введенное Вами число {chislo} может быть меньше нуля, иметь всего два знака или меньше");}
 if ( result == -2 ) {System.Console.WriteLine($"Введенное Вами число {chislo} имеет целых четыре знака или больше");}
 if ( result > 0 ) {System.Console.WriteLine($"Цифра № 2 введенного Вами числа {chislo} равна {result}.");}

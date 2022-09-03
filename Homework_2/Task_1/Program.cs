@@ -39,7 +39,19 @@ for (int i = 2; i >= 0; i--)
 System.Console.WriteLine($"Вторая цифра {massbyffer [1]} введенного Вами числа {chislo}.");
 }
 
-else
+//---
+
+if ( chislo > 1000 )
 {
-  System.Console.WriteLine($"Введенное Вами число {chislo} не является трехзначным");
+  System.Console.WriteLine($"Введенное Вами число {chislo} четырехзначное !");
+}
+
+if ( chislo >= 0 && chislo < 99 )
+{
+  System.Console.WriteLine($"Введенное Вами число {chislo} двухзначное или меньше!");
+}
+
+if ( chislo < 0 )
+{
+  System.Console.WriteLine($"Введенное Вами число {chislo} меньше нуля");
 }

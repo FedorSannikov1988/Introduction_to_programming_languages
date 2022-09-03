@@ -33,4 +33,4 @@ System.Console.WriteLine($"Случайное трехзначное число:
 
 int OtveT = (FaynChislo(RanChislo, 1)*10) + FaynChislo(RanChislo, 3) ;
 
-System.Console.WriteLine($"Случайное число из которого вынули второе по счету число: {OtveT}");
+System.Console.WriteLine($"Случайное число из которого вынули второе по счету цифру: {OtveT}");

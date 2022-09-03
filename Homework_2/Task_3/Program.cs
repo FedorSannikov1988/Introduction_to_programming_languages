@@ -55,4 +55,4 @@ System.Console.WriteLine($"Третья цифра {ost} введенного ч
 else {System.Console.WriteLine($"Третьей цифры в введенном числе {chislo} нет !");}
 
 }
-else {System.Console.WriteLine($"Введенное число {chislo} меньше 0");}
+else {System.Console.WriteLine($"Введенное число {chislo} меньше 0 или 0");}
