@@ -1,20 +1,21 @@
-﻿int number = new Random().Next(10,100);
-int i = number;
-int tmp = i%10;
-int max = 0;
+﻿/*
+ Напишите программу, которая выводит случайное число 
+ из отрезка [10, 99] и показывает наибольшую цифру числа.
+*/
 
-while ( i > 0 )
+int RandNumber = new Random().Next(10,100);
+int byfer1 = RandNumber;
+int byfer2 = RandNumber % 10;
+int MaX = 0;
+
+while ( byfer1 > 0 )
 {
-if( tmp > max )
-{
-max = tmp;
+if( byfer2 > MaX ) {MaX = byfer2;}
+byfer1 = byfer1 / 10;
+byfer2 = byfer1 % 10;
 }
 
-i = i/10;
-
-tmp = i%10;
-}
-
-System.Console.WriteLine(number);
-
-System.Console.WriteLine(max);
+//---
+System.Console.WriteLine($"Случайное число: {RandNumber}");
+System.Console.WriteLine("----*----*----");
+System.Console.WriteLine($"Наибольшая из цифр составляющая данное число: {MaX}");

@@ -3,7 +3,7 @@
 на выходе показывает последнюю цифру этого числа.
 */
 
-//По факту здесь можно ввести любые символы
+//По факту здесь можно ввести любые символы !
 System.Console.Write("Введите трехзначное число: ");
 string Value = Console.ReadLine() ?? "";
 char LastChar = Value [ Value.Length - 1 ];
@@ -11,6 +11,8 @@ char LastChar = Value [ Value.Length - 1 ];
 //---
 
 System.Console.WriteLine( LastChar );
+
+//Сам добавил :
 System.Console.WriteLine( "---" );
 System.Console.WriteLine( Value[0] );
 System.Console.WriteLine( Value[1] );
