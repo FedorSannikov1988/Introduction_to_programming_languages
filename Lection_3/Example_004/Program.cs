@@ -58,7 +58,7 @@ void SortMassMaXMiN(int[] massiv)
     }
 }
 
-int[] massiv = { 1, 2, 12, 6, 6, 9, 4, 7, 5 };
+int[] massiv = { 1, -5, 12, 6, 6, -8, 109, 7, 5, -82, 66, 0, 56 };
 
 PrintMass(massiv);
 
