@@ -66,6 +66,7 @@ int TurnNamber(int chislo)
     int turnchislo = 0;
 
     int count = 0;
+
     while (byfer1 > 0)
     {
         byfer1 = byfer1 / 10;
