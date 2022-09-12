@@ -49,9 +49,9 @@ bool ExaminationDimensionHonestArray(int Chislo)
     return true;
 }
 
-//Функция не оптимизирована ! Слишком много new Random().Next(0, array.Length);
-//Писалось в спешке ночью (да еще и тежело отлаживалось) !
-//Смотри оптимизированный вариант № 2
+//Оптимизированный вариант функции 
+//Как мне кажется сократил количество new Random().Next(0, array.Length);
+//до минимума !
 int[] FillingHonestArray(int[] array)
 {
     int rand1 = 0;
@@ -62,16 +62,13 @@ int[] FillingHonestArray(int[] array)
 
     for (int i = 0; i < array.Length / 2; i++)
     {
-        while (rand1 == rand2)
-        {
-            rand1 = new Random().Next(0, array.Length);
-            rand2 = new Random().Next(0, array.Length);
-        }
-
         flag = 0;
 
         while (flag == 0)
         {
+            rand1 = new Random().Next(0, array.Length);
+            rand2 = new Random().Next(0, array.Length);
+
             if ((array[rand1] == -1) && (array[rand2] == -1) && (rand1 != rand2))
             {
                 array[rand1] = i + 1;
@@ -80,8 +77,6 @@ int[] FillingHonestArray(int[] array)
 
                 flag = 1;
             }
-            rand1 = new Random().Next(0, array.Length);
-            rand2 = new Random().Next(0, array.Length);
         }
     }
     return array;

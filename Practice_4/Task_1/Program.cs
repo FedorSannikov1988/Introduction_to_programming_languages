@@ -12,17 +12,18 @@ ulong InputNamber(string message)
     return Convert.ToUInt64(Console.ReadLine());
 }
 
-ulong SumNumbers(ulong number)
+ulong SummaNumbers(ulong number)
 {
-    ulong Sum = 0;
+    ulong Summa = 0;
+
     for (ulong i = 1; i <= number; i++)
     {
-        Sum = Sum + i;
+        Summa = Summa + i;
     }
-    return Sum;
+    return Summa;
 }
 
-ulong SumNumbersGauss(ulong number)
+ulong SummaNumbersGauss(ulong number)
 {
     return (((number + 1) * number)/ 2);
 }
@@ -31,6 +32,8 @@ System.Console.WriteLine("Данная программа принимает н�
 
 ulong Namber = InputNamber("Введите число А: ");
 
-System.Console.WriteLine($"Сумма рассчитанная через цикл for: {ulong SumNumbers(number:Namber)} равна {SumNumbersGauss(number:Namber)}");
+System.Console.WriteLine($"Сумма рассчитанная через цикл for равна {SummaNumbers(number:Namber)}");
+
+System.Console.WriteLine($"Сумма рассчитанная через функцию Гаусса равна {SummaNumbersGauss(number:Namber)}");
 
 System.Console.Read();
