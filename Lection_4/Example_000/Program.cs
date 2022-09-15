@@ -4,7 +4,8 @@
     {
         return 1;
     }
-    System.Console.WriteLine("+");
+    System.Console.WriteLine($"{N}");
+    System.Console.WriteLine("#");
     return (Proba1(N - 1));
 }
 
@@ -14,11 +15,13 @@ double Proba2(double N)
     {
         return 0;
     }
-    //System.Console.WriteLine($"{N}");
+    System.Console.WriteLine($"{N}");
     System.Console.WriteLine("*");
     return (Proba2(N - 2));
 }
 
-//Proba1(N: 5);
-
+System.Console.WriteLine("----");
+Proba1(N:5);
+System.Console.WriteLine("----");
 Proba2(N:10);
+System.Console.WriteLine("----");
