@@ -176,9 +176,9 @@ if (
 
     System.Console.WriteLine("Сгенерированная матрица:");
 
-    PrintIntMatrix(RandomMatrix);
+    PrintIntMatrix(matrix: RandomMatrix);
 
-    int[] LineMax = SearchLineMax(RandomMatrix);
+    int[] LineMax = SearchLineMax(matrix: RandomMatrix);
 
     System.Console.WriteLine("Найденные максимумы в каждой строчке:");
 
@@ -188,7 +188,7 @@ if (
 
     System.Console.WriteLine($"Сумма найденных максимумов в каждой строчке: {SymmaLineMax}");
 
-    int[] ColumnMin = SearchColumnMin(RandomMatrix);
+    int[] ColumnMin = SearchColumnMin(matrix: RandomMatrix);
 
     System.Console.WriteLine("Найденные минимумы в каждой колонке:");
 
