@@ -20,8 +20,22 @@ double Proba2(double N)
     return (Proba2(N - 2));
 }
 
+double Proba3(double N)
+{
+    if (N == 1)
+    {
+        System.Console.WriteLine($"{N}");
+        return 1;
+    }
+    System.Console.WriteLine($"{N}");
+    System.Console.WriteLine("+");
+    return (Proba3(N - 1));
+}
+
 System.Console.WriteLine("----");
 Proba1(N:5);
 System.Console.WriteLine("----");
 Proba2(N:10);
+System.Console.WriteLine("----");
+Proba3(N:2);
 System.Console.WriteLine("----");
