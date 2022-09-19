@@ -49,20 +49,16 @@ bool ExaminationElementArray(int elementArray)
         );
         return false;
     }
-   
+
     if (elementArray == 0)
     {
-        System.Console.WriteLine(
-            "Количество элементов в массиве не может быть равно нулю"
-        );
+        System.Console.WriteLine("Количество элементов в массиве не может быть равно нулю");
         return false;
     }
 
     if (elementArray < 0)
     {
-        System.Console.WriteLine(
-            "Количество элементов в массиве не может быть меньше нуля"
-        );
+        System.Console.WriteLine("Количество элементов в массиве не может быть меньше нуля");
         return false;
     }
     return true;
@@ -77,15 +73,17 @@ void PrintConsoleDoubleArray(int[] array)
     System.Console.WriteLine();
 }
 
+//Куда лучше чем я придумал !
+
 int[] TurnOverArray(int[] array)
 {
-    int[] TurnArray = new int[array.Length];
-
-    for (int i = 1; i <= array.Length; i++)
+    for (int i = 0; i < array.Length / 2; i++)
     {
-        TurnArray[array.Length - i] = array[i - 1];
+        var temp = array[i];
+        array[i] = array[array.Length - (i + 1)];
+        array[array.Length - (i + 1)] = temp;
     }
-    return TurnArray;
+    return array;
 }
 
 int InputDataInt(string message)
@@ -99,26 +97,34 @@ int InputDataInt(string message)
     throw new Exception("Введенные Вами символы невозможно преобразовать в переменную Int32 !");
 }
 
-int AmountElementArrayVariable = InputDataInt("Введите количество элементов в генерируемом массиве: ");
+int AmountElementArrayVariable = InputDataInt(
+    "Введите количество элементов в генерируемом массиве: "
+);
 
 int MinimumRandomVariable = InputDataInt("Введите нижний придел генерации случайных чисел: ");
 
 int MaximumRandomVariable = InputDataInt("Введите верхний придел генерации случайных чисел: ");
 
-if (ExaminationElementArray(AmountElementArrayVariable) &&
-    ExaminationMaximumMinimumRandomLimit(MinimumRandomVariable, MaximumRandomVariable)) 
+if (
+    ExaminationElementArray(AmountElementArrayVariable)
+    && ExaminationMaximumMinimumRandomLimit(MinimumRandomVariable, MaximumRandomVariable)
+)
 {
-int[] ArrayRandomInt = CreateIntRandomArray(AmountElementArrayVariable, MinimumRandomVariable, MaximumRandomVariable);
+    int[] ArrayRandomInt = CreateIntRandomArray(
+        AmountElementArrayVariable,
+        MinimumRandomVariable,
+        MaximumRandomVariable
+    );
 
-System.Console.WriteLine("Сгенерированный массив чисел:");
+    System.Console.WriteLine("Сгенерированный массив чисел:");
 
-PrintConsoleDoubleArray(ArrayRandomInt);
+    PrintConsoleDoubleArray(ArrayRandomInt);
 
-int[] TurnArrayRandomInt = TurnOverArray(ArrayRandomInt);
+    int[] TurnArrayRandomInt = TurnOverArray(ArrayRandomInt);
 
-System.Console.WriteLine("Перевернутый массив чисел:");
+    System.Console.WriteLine("Перевернутый массив чисел:");
 
-PrintConsoleDoubleArray(TurnArrayRandomInt);
+    PrintConsoleDoubleArray(TurnArrayRandomInt);
 }
 
 System.Console.Read();
